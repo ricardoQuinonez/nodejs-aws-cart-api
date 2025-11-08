@@ -10,7 +10,7 @@ export class UsersService {
     this.users = {};
   }
 
-  findOne(name: string): User {
+  findOne(name: string): User | undefined {
     for (const id in this.users) {
       if (this.users[id].name === name) {
         return this.users[id];
